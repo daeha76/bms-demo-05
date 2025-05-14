@@ -1,6 +1,6 @@
 import { Calendar, Home, Inbox, Search, Settings, LayoutDashboard } from 'lucide-react';
 
-const sidebarMenu = [
+export const sidebarMenuMain = [
   {
     title: 'Home',
     url: '/test',
@@ -37,4 +37,3 @@ const sidebarMenu = [
   },
 ];
 
-export default sidebarMenu;
