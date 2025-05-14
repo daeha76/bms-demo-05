@@ -1,12 +1,5 @@
 import { Card, CardContent, CardHeader } from '~/common/components/ui/card';
-import { cn } from '~/lib/utils';
-import {
-  CalendarIcon,
-  MapPinIcon,
-  CircleCheckBig,
-  CircleArrowOutUpLeft,
-  Hash,
-} from 'lucide-react';
+import { CalendarIcon, MapPinIcon, Hash } from 'lucide-react';
 import { Badge } from '~/common/components/ui/badge';
 import type { DateRange } from 'react-day-picker';
 import { DateTime } from 'luxon';

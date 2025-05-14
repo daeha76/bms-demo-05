@@ -1,26 +1,6 @@
-import {
-  BriefcaseIcon,
-  CheckCircle2Icon,
-  CalendarIcon,
-  MapPinIcon,
-  TrendingDownIcon,
-  TrendingUpIcon,
-  CircleCheckBig,
-  CircleArrowOutUpLeft,
-  User,
-} from 'lucide-react';
+import { User } from 'lucide-react';
 import { DateTime } from 'luxon';
 import type { DateRange } from 'react-day-picker';
-import { Badge } from '~/common/components/ui/badge';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '~/common/components/ui/card';
-import { cn } from '~/lib/utils';
 import DashboardEngineerCard, {
   type DashboardEngineerCardData,
 } from './engineer-card';
