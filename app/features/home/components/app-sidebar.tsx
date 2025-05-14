@@ -12,7 +12,7 @@ import { ArrowUpCircleIcon } from 'lucide-react';
 import { NavMain } from './sidebar/nav-main';
 import { sidebarMenuMain } from './sidebar/sidebar-menu';
 import { NavUser } from './sidebar/nav-user';
-import { Calendar, Home, Inbox, Search, Settings, LayoutDashboard } from 'lucide-react';
+import { Search, LayoutDashboard, Users, Map } from 'lucide-react';
 
 const data = {
   user: {
@@ -21,31 +21,28 @@ const data = {
   },
   navMain: [
     {
-      title: 'Home',
-      url: '/test',
-      icon: Home,
+      title: '기술인관리',
+      url: '#',
+      icon: Users,
       items: [
         {
-          title: 'Dashboard',
-          url: '/dashboard',
-          icon: Inbox,
+          title: '기술인 현황',
+          url: '/engineers',
         },
         {
-          title: 'test2',
-          url: '/test2',
-          icon: Search,
+          title: '교육관리',
+          url: '/engineers/education',
         },
       ],
     },
     {
-      title: 'Dashboard',
-      url: '/dashboard',
-      icon: LayoutDashboard,
+      title: '프로젝트 관리',
+      url: '#',
+      icon: Map,
       items: [
         {
-          title: 'test3',
-          url: '/test3',
-          icon: Search,
+          title: '프로젝트 현황',
+          url: '/projects',
         },
       ],
     },
@@ -81,14 +78,19 @@ export function loader() {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible='icon' {...props}>
+    <Sidebar collapsible='offcanvas' {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild className='data-[slot=sidebar-menu-button]:!p-1.5'>
+            <SidebarMenuButton
+              asChild
+              className='data-[slot=sidebar-menu-button]:!p-1.5'
+            >
               <Link to='/'>
                 <ArrowUpCircleIcon className='h-5 w-5' />
-                <span className='text-base font-semibold'>A+CM 건축사사무소</span>
+                <span className='text-base font-semibold'>
+                  A+CM 건축사사무소
+                </span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

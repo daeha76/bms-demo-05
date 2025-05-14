@@ -1,10 +1,19 @@
 'use client';
 
-import { ChevronRight, MailIcon, PlusCircleIcon, type LucideIcon } from 'lucide-react';
+import {
+  ChevronRight,
+  MailIcon,
+  PlusCircleIcon,
+  type LucideIcon,
+} from 'lucide-react';
 import { Link } from 'react-router';
 
 import { Button } from '~/common/components/ui/button';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '~/common/components/ui/collapsible';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '~/common/components/ui/collapsible';
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -33,7 +42,7 @@ export function NavMain({
   return (
     <SidebarGroup>
       <SidebarGroupContent className='flex flex-col gap-2'>
-        <SidebarMenu>
+        {/* <SidebarMenu>
           <SidebarMenuItem className='flex items-center gap-2'>
             <SidebarMenuButton
               tooltip='Quick Create'
@@ -47,9 +56,9 @@ export function NavMain({
               <span className='sr-only'>Inbox</span>
             </Button>
           </SidebarMenuItem>
-        </SidebarMenu>
+        </SidebarMenu> */}
         <SidebarMenu>
-          {items.map((item) => (
+          {items.map(item => (
             <Collapsible className='group/collapsible'>
               <SidebarMenuItem key={item.title}>
                 <CollapsibleTrigger asChild>
@@ -70,7 +79,7 @@ export function NavMain({
                 <CollapsibleContent>
                   {item.items && (
                     <SidebarMenuSub>
-                      {item.items.map((subItem) => (
+                      {item.items.map(subItem => (
                         <SidebarMenuSubItem key={subItem.title}>
                           <SidebarMenuSubButton>
                             {subItem.icon && <subItem.icon />}
